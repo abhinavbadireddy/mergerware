@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Loan App</h1>
+    </header>
+    <main>
+        <section id="register">
+            <h2>Register</h2>
+            <form>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="role">Role:</label>
+                <select id="role" name="role">
+                    <option value="admin">Admin</option>
+                    <option value="borrower">Borrower</option>
+                    <option value="lender">Lender</option>
+                </select>
+                <button type="submit">Register</button>
+            </form>
+        </section>
+        <section id="dashboard" style="display:none;">
+            <h2>Dashboard</h2>
+            <div id="loan-request">
+                <h3>Loan Request</h3>
+                <p>Request a loan by clicking the button below:</p>
+                <button onclick="requestLoan()">Request Loan</button>
+                <ul id="loan-request-list"></ul>
+            </div>
+            <div id="loan-payment">
+                <h3>Loan Payment</h3>
+                <p>Confirm a loan payment by clicking the button below:</p>
+                <button onclick="confirmPayment()">Confirm Payment</button>
+                <ul id="loan-payment-list"></ul>
+            </div>
+            <div id="transactions">
+                <h3>Transactions</h3>
+                <ul id="transaction-list"></ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Loan App</p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
